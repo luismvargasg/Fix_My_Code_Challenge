@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module to define a class Square"""
+"""Module to define a class Square
+"""
 
 
 class square():
@@ -8,7 +9,8 @@ class square():
     Returns:
         Nothing.
     """
-    size = 0
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         """Constructor for the class Square"""
@@ -17,19 +19,18 @@ class square():
 
     def area_of_my_square(self):
         """Area of the square"""
-        return self.size * 2
+        return self.width * self.height
 
     def PermiterOfMySquare(self):
         """Perimeter of the square"""
-        return (self.size * 2) + (self.size * 2)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """String representation of the class square"""
-        return "{}/{}".format(self.size, self.size)
+        return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-
-    s = square(size=12)
+    s = square(width=12, height=12)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
